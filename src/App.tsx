@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Trash2 } from 'lucide-react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TaskForm></TaskForm>
+      <Task></Task>
     </>
   )
 }
+const TaskForm = ()=>{
+  const title = '';
+  const description = '';
 
+  return (
+    <>
+      <input type="text" placeholder='Add a task' />
+      <input type="text" placeholder='Add a description'/>
+    </>
+  )
+}
+const Task = ()=>{
+  const titulo = "titulo de la tarea"
+  const description = 'Esta es la descripción de la tarea'
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Puedes usar el evento si lo necesitas
+    console.log('No me borres!');
+  };
+  return (
+    <>
+      <article>
+        <header style={{color: 'white'}}>{titulo}</header>
+        <main className='main-task'> 
+          <input className='custom' type="checkbox"/>
+          <span>{description}</span>
+          <button onClick={handleClick} style={{fontSize: '12px'}}>
+          <Trash2 size={14}/>
+          </button>
+        </main>
+      </article>
+    </>
+  )
+}
 export default App
