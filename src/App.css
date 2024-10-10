@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -47,6 +46,10 @@ input.custom{
 }
 .main-task{
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+.main-task > span{
+  width: 300px;
 }
