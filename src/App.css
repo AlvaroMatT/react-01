@@ -46,10 +46,28 @@ input.custom{
 }
 .main-task{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
 .main-task > span{
   width: 300px;
+  font-size: 16px;
+}
+.delete-completed-task{
+  width: 250px;
+  color: #242424;
+  background-color: white;
+}
+.main-task > button {
+  background-color: transparent;
+}
+.bottom-container{
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+}
+.description{
+  padding-left: 25px;
+  font-size: 14px;
 }
